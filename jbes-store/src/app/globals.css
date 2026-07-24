@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+:root {
+  --background: #02030a;
+  --foreground: #f8fbff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #02030a;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.35);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #02030a;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 3px solid #02030a;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #22d3ee, #8b5cf6);
+}
+
+.glass-panel {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.035)),
+    rgba(2, 3, 10, 0.5);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 24px 80px rgba(0, 0, 0, 0.36);
+  backdrop-filter: blur(26px);
+}
+
+.glass-panel::before,
+.glow-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(120deg, rgba(34, 211, 238, 0.7), transparent 32%, rgba(168, 85, 247, 0.72));
+  opacity: 0.28;
+  transition: opacity 250ms ease, filter 250ms ease;
+}
+
+.glass-panel:hover::before,
+.glow-card:hover::before {
+  opacity: 0.72;
+  filter: blur(2px);
+}
+
+.glow-card {
+  transform-style: preserve-3d;
+}
+
+.particles {
+  background-image:
+    radial-gradient(circle, rgba(34, 211, 238, 0.42) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(168, 85, 247, 0.35) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.22) 0 1px, transparent 1.5px);
+  background-position:
+    0 0,
+    40px 60px,
+    120px 20px;
+  background-size:
+    140px 140px,
+    180px 180px,
+    220px 220px;
+  animation: particle-drift 34s linear infinite;
+  opacity: 0.65;
+}
+
+.animate-spin-slow {
+  animation: spin 7s linear infinite;
+}
+
+details[open] {
+  border-color: rgba(34, 211, 238, 0.32);
+  box-shadow: 0 0 36px rgba(34, 211, 238, 0.1);
+}
+
+@keyframes particle-drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-180px, 220px, 0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

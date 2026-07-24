@@ -1,0 +1,15 @@
+spawn-size: 250
+buffer-size: 200
+center-x: 0
+center-z: 0
+spawn-y: auto
+border-block: RED_CONCRETE
+ground-block: GRASS_BLOCK
+placed-block-remove-delay-seconds: 30
+protect-spawn: true
+disable-pvp-in-spawn: true
+protect-buffer-terrain: true
+temporary-blocks-in-buffer: true
+create-armor-stands: true
+clear-area-before-generation: true
+plains-style-terrain: true

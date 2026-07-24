@@ -1,0 +1,9 @@
+com\jbes\lifestealspawn\listener\ProtectionListener.class
+com\jbes\lifestealspawn\generation\SpawnGenerator$1.class
+com\jbes\lifestealspawn\util\TextUtils.class
+com\jbes\lifestealspawn\util\BlockUtils.class
+com\jbes\lifestealspawn\command\GenerateSpawnCommand.class
+com\jbes\lifestealspawn\LifeStealSpawnPlugin.class
+com\jbes\lifestealspawn\manager\TemporaryBlockManager.class
+com\jbes\lifestealspawn\util\RegionUtils.class
+com\jbes\lifestealspawn\generation\SpawnGenerator.class
